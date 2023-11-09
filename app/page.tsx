@@ -45,11 +45,12 @@ export default function Home() {
   const create = () => {
     const count: number = db.length;
     const quiz = new Array<IQuestion>();
+
     for(let i=0; i<10; i++) {
       const index = Math.floor(Math.random() *  db.length)
       quiz.push(makeQuestion(db[index], i))
     }
-    console.log(quiz)
+    
     setQuestions(quiz);
   }
 
